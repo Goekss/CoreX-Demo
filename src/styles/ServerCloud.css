@@ -1,0 +1,60 @@
+.cloud-page-header {
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 1px solid rgba(14, 165, 233, 0.22);
+  border-radius: 8px;
+  background-color: var(--surface, #fff);
+  background-image: linear-gradient(rgba(14, 165, 233, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(14, 165, 233, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.cloud-page-heading { display: flex; align-items: center; gap: 1rem; }
+.cloud-page-icon { width: 52px; height: 52px; display: grid; place-items: center; border-radius: 8px; color: #0369a1; background: #e0f2fe; font-size: 1.55rem; }
+.cloud-page-heading h1 { margin: 0 0 0.2rem; font-size: 1.5rem; }
+.cloud-page-heading p { margin: 0; color: var(--app-text-muted, #64748b); }
+.cloud-environment-status { display: flex; align-items: center; gap: 0.65rem; white-space: nowrap; }
+.cloud-environment-status strong, .cloud-environment-status small { display: block; }
+.cloud-environment-status strong { font-size: 0.82rem; }
+.cloud-environment-status small { color: var(--app-text-muted, #64748b); }
+.cloud-status-dot { width: 10px; height: 10px; border-radius: 50%; background: #10b981; box-shadow: 0 0 0 5px rgba(16, 185, 129, 0.12); }
+
+.cloud-provider-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.cloud-provider-card { padding: 1.2rem; border: 1px solid rgba(148, 163, 184, 0.28); border-radius: 8px; background: var(--surface, #fff); box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05); transition: border-color 0.2s, box-shadow 0.2s; }
+.cloud-provider-card.selected { border-color: var(--provider-color); box-shadow: 0 8px 24px rgba(15, 23, 42, 0.1); }
+.cloud-provider-azure { --provider-color: #0078d4; }
+.cloud-provider-aws { --provider-color: #ff9900; }
+.cloud-provider-gcp { --provider-color: #4285f4; }
+.cloud-provider-top { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; }
+.cloud-provider-mark { width: 132px; height: 46px; display: flex; align-items: center; padding-left: 12px; background: transparent; }
+.cloud-provider-mark img { max-width: 124px; width: auto; height: 34px; object-fit: contain; object-position: left center; }
+.cloud-provider-state { display: inline-flex; align-items: center; gap: 0.35rem; color: #047857; font-size: 0.75rem; font-weight: 700; }
+.cloud-provider-card h2 { margin: 1rem 0 0.65rem; font-size: 1.05rem; }
+.cloud-provider-meta { display: flex; flex-wrap: wrap; gap: 0.75rem; color: var(--app-text-muted, #64748b); font-size: 0.78rem; }
+.cloud-provider-meta span { display: inline-flex; align-items: center; gap: 0.3rem; }
+.cloud-capacity { margin-top: 1rem; }
+.cloud-capacity-label { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; font-size: 0.78rem; }
+.cloud-capacity-label span, .cloud-capacity small { color: var(--app-text-muted, #64748b); }
+.cloud-progress { height: 8px; margin: 0.45rem 0 0.3rem; overflow: hidden; border-radius: 4px; background: rgba(148, 163, 184, 0.2); }
+.cloud-progress span { display: block; height: 100%; border-radius: inherit; background: var(--provider-color); }
+.cloud-capacity small { display: block; text-align: right; font-size: 0.7rem; }
+.cloud-connection-details { margin-top: 1rem; display: grid; gap: 0.55rem; }
+.cloud-connection-details > div { min-width: 0; display: flex; align-items: center; gap: 0.6rem; padding: 0.55rem 0.65rem; border-radius: 6px; background: rgba(148, 163, 184, 0.08); }
+.cloud-connection-details > div > i { color: var(--provider-color); }
+.cloud-connection-details span, .cloud-connection-details small, .cloud-connection-details strong { min-width: 0; display: block; }
+.cloud-connection-details small { color: var(--app-text-muted, #64748b); font-size: 0.65rem; }
+.cloud-connection-details strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 0.75rem; }
+.cloud-service-list { margin: 1rem 0; padding-top: 0.9rem; border-top: 1px solid rgba(148, 163, 184, 0.2); }
+.cloud-service-list h3 { margin: 0 0 0.6rem; font-size: 0.75rem; text-transform: uppercase; color: var(--app-text-muted, #64748b); }
+.cloud-service-list span { display: block; padding: 0.38rem 0; font-size: 0.82rem; }
+.cloud-service-list span::before { content: ''; display: inline-block; width: 6px; height: 6px; margin-right: 0.5rem; border-radius: 50%; background: var(--provider-color); vertical-align: middle; }
+.cloud-provider-button { width: 100%; min-height: 38px; display: flex; align-items: center; justify-content: center; gap: 0.45rem; border: 1px solid var(--provider-color); border-radius: 6px; color: var(--provider-color); background: transparent; font-weight: 700; font-size: 0.82rem; }
+.cloud-provider-button:not(:disabled):hover { color: #fff; background: var(--provider-color); }
+.cloud-provider-button:disabled { cursor: default; color: #fff; background: var(--provider-color); opacity: 1; }
+
+[data-theme='dark'] .cloud-page-header, [data-theme='dark'] .cloud-provider-card { background-color: rgba(15, 23, 42, 0.82); border-color: rgba(148, 163, 184, 0.22); }
+
+@media (max-width: 991.98px) { .cloud-provider-grid { grid-template-columns: 1fr; } }
+@media (max-width: 575.98px) { .cloud-page-header { align-items: flex-start; flex-direction: column; } .cloud-environment-status { white-space: normal; } }

@@ -1,0 +1,34 @@
+.user-view-switch { height: 38px; padding: 3px; display: inline-grid; grid-template-columns: repeat(2, 36px); border: 1px solid var(--border-soft); border-radius: 7px; background: var(--surface-2); }
+.user-view-switch button { border: 0; border-radius: 5px; color: var(--app-text); background: transparent; }
+.user-view-switch button.active { color: #fff; background: #0d6efd; }
+.user-card-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.85rem; }
+.user-card { min-width: 0; padding: 0.95rem; border: 1px solid var(--border-soft); border-radius: 8px; color: var(--app-text); background: var(--surface); box-shadow: var(--shadow-soft); }
+.user-card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
+.user-card-top img { width: 64px; height: 64px; border-radius: 8px; object-fit: cover; }
+.user-card-top > i { color: #64748b; font-size: 3.6rem; }
+.user-card-status { padding: 0.25rem 0.5rem; display: inline-flex; align-items: center; gap: 0.3rem; border-radius: 5px; color: #b91c1c; background: #fee2e2; font-size: 0.7rem; font-weight: 700; }
+.user-card-status.active { color: #047857; background: #d1fae5; }
+.user-card-status.locked { border: 1px solid #fecaca; cursor: pointer; transition: background-color 160ms ease, transform 160ms ease; }
+.user-card-status.locked:hover { background: #fecaca; transform: translateY(-1px); }
+.user-card-status.locked:focus-visible { outline: 2px solid #dc2626; outline-offset: 2px; }
+.user-card-status.locked:disabled { cursor: not-allowed; opacity: 0.65; transform: none; }
+.user-card-state-actions { display: grid; justify-items: end; gap: 0.35rem; }
+.user-card-lock-button { padding: 0.18rem 0.4rem; display: inline-flex; align-items: center; gap: 0.25rem; border: 1px solid var(--border-soft); border-radius: 5px; color: var(--app-text); background: transparent; font-size: 0.65rem; }
+.user-card-lock-button:hover { color: #b91c1c; border-color: #fca5a5; background: #fef2f2; }
+.user-card-lock-button:disabled { cursor: wait; opacity: 0.65; }
+.user-card h3 { margin: 0.9rem 0 0.2rem; font-size: 1rem; }
+.user-card > p { margin: 0; color: var(--app-text); opacity: 0.72; font-size: 0.78rem; }
+.user-card-details { margin: 1.5rem 0 1rem; display: grid; gap: 0.55rem; }
+.user-card-details span { min-width: 0; display: flex; align-items: center; gap: 0.5rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 0.8rem; }
+.user-card-details i { color: #0d6efd; }
+.user-card-details .user-card-phone-icon { color: #16a34a; }
+.user-card-details .user-card-location-icon { color: #dc2626; }
+.user-card-actions { padding-top: 0.8rem; display: flex; justify-content: flex-end; gap: 0.45rem; border-top: 1px solid var(--border-soft); }
+.user-card-actions .btn { width: 34px; height: 34px; padding: 0; display: grid; place-items: center; border-radius: 6px; }
+[data-theme='dark'] .user-card-status.active { color: #6ee7b7; background: rgba(4, 120, 87, 0.28); }
+[data-theme='dark'] .user-card-status.locked { color: #fca5a5; background: rgba(185, 28, 28, 0.24); border-color: rgba(252, 165, 165, 0.35); }
+[data-theme='dark'] .user-card-status.locked:hover { background: rgba(185, 28, 28, 0.4); }
+[data-theme='dark'] .user-card-lock-button:hover { color: #fca5a5; border-color: rgba(252, 165, 165, 0.5); background: rgba(185, 28, 28, 0.18); }
+@media (max-width: 1199.98px) { .user-card-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 991.98px) { .user-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 575.98px) { .user-card-grid { grid-template-columns: 1fr; } }
