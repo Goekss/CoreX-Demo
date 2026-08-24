@@ -9,3 +9,5 @@
 
 - [2026-08-24 09:05:15] feat(dashboard): real-time metrics telemetry visualizer with charts
 
+- [2026-08-24 11:15:30] feat(api-docs): interactive openapi swagger ui with live mock sandbox
+
