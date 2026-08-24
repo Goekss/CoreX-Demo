@@ -7,3 +7,5 @@
 
 - [2026-08-23 16:40:10] feat(docker): multi-container docker compose setup with envoy and redis
 
+- [2026-08-24 09:05:15] feat(dashboard): real-time metrics telemetry visualizer with charts
+
