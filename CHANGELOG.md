@@ -15,3 +15,5 @@
 
 - [2026-08-24 16:30:15] feat(auth-mock): sample tenant simulation with role-switching toolbar
 
+- [2026-08-24 19:15:25] fix(docker): resolve port conflict on local telemetry collector bridge
+
