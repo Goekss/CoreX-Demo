@@ -19,3 +19,5 @@
 
 - [2026-08-26 10:15:30] fix(dashboard): stabilize websocket live telemetry chart stream
 
+- [2026-08-26 16:40:10] refactor(views): optimize mobile layout for showcase tablet presentation
+
