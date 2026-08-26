@@ -17,3 +17,5 @@
 
 - [2026-08-24 19:15:25] fix(docker): resolve port conflict on local telemetry collector bridge
 
+- [2026-08-26 10:15:30] fix(dashboard): stabilize websocket live telemetry chart stream
+
