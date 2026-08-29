@@ -27,3 +27,5 @@
 
 - [2026-08-29 13:50:40] docs: comprehensive walkthrough guide with one-click local run command
 
+- [2026-08-29 16:30:15] feat(demo-core): live interactive microservices demonstration sandbox
+
