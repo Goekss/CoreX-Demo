@@ -25,3 +25,5 @@
 
 - [2026-08-29 11:15:30] test(e2e): smoke tests for all interactive demonstration scenarios
 
+- [2026-08-29 13:50:40] docs: comprehensive walkthrough guide with one-click local run command
+
