@@ -35,3 +35,5 @@
 
 - [2026-08-31 11:15:30] feat(api-docs): interactive openapi swagger ui with live mock sandbox
 
+- [2026-08-31 13:50:40] feat(simulation): load generation simulator with variable concurrency sliders
+
