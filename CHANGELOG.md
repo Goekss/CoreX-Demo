@@ -37,3 +37,5 @@
 
 - [2026-08-31 13:50:40] feat(simulation): load generation simulator with variable concurrency sliders
 
+- [2026-08-31 16:30:15] feat(auth-mock): sample tenant simulation with role-switching toolbar
+
