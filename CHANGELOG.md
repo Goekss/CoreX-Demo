@@ -47,3 +47,5 @@
 
 - [2026-09-01 18:30:15] style(theme): enhance dark high-contrast developer demo interface
 
+- [2026-09-02 09:15:10] test(e2e): smoke tests for all interactive demonstration scenarios
+
