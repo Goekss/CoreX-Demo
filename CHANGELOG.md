@@ -53,3 +53,5 @@
 
 - [2026-09-02 15:10:35] feat(demo-core): live interactive microservices demonstration sandbox
 
+- [2026-09-02 18:25:40] feat(docker): multi-container docker compose setup with envoy and redis
+
