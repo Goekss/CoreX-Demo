@@ -10,13 +10,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet" />
     <!-- GitHub Pages SPA redirect handler -->
     <script type="text/javascript">
+      if (!location.pathname.endsWith('/') && !location.pathname.includes('.')) {
+        location.replace(location.pathname + '/' + location.search + location.hash);
+      }
       (function(l) {
         if (l.search[1] === '/' ) {
           var decoded = l.search.slice(1).split('&').map(function(s) { 
-            return s.replace(/~and~/g, '&')
+            return s.replace(/~and~/g, '&');
           }).join('?');
+          var basePath = l.pathname.endsWith('/') ? l.pathname : (l.pathname + '/');
           window.history.replaceState(null, null,
-            l.pathname.slice(0, -1) + decoded + l.hash
+            basePath + (decoded ? decoded.replace(/^\//, '') : '') + l.hash
           );
         }
       }(window.location))

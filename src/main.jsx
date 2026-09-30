@@ -1,3 +1,4 @@
+if (window.location.pathname === '/CoreX-Demo') { window.history.replaceState(null, '', '/CoreX-Demo/' + window.location.search + window.location.hash); }
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'

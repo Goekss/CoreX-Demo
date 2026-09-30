@@ -29,13 +29,13 @@ function App() {
           </ProtectedRoute>
         )}
       >
-        <Route index element={<Dashboard />} />
+        <Route index element={<Dashboard />} />`n        <Route path="" element={<Dashboard />} />
         <Route path="kunden" element={<Kunden />} />
         <Route path="projekte" element={<Projekte />} />
         <Route path="tickets" element={<Tickets />} />
         <Route path="chat" element={<Chat />} />
         <Route path="filialen" element={<Filiale />} />
-        {/* Sadece SuperAdmin ve Admin erişebilir */}
+        {/* Sadece SuperAdmin ve Admin eriÅŸebilir */}
         <Route path="benutzer" element={
           <ProtectedRoute allowedRoles={['SuperAdmin', 'Admin', 'Manager']}>
             <Benutzer />
