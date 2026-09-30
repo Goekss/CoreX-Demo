@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+﻿name: Deploy to GitHub Pages
 
 on:
   push:
@@ -18,7 +18,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Kodu çek
+      - name: Kodu Ã§ek
         uses: actions/checkout@v4
 
       - name: Node.js kur
@@ -27,16 +27,16 @@ jobs:
           node-version: 22
           cache: npm
 
-      - name: Bağımlılıkları yükle
+      - name: BaÄŸÄ±mlÄ±lÄ±klarÄ± yÃ¼kle
         run: npm install
 
       - name: Projeyi derle
-        run: npm run build -- --base=/vcorex-demo/
+        run: npm run build -- --base=./
 
-      - name: Pages ayarını yap
+      - name: Pages ayarÄ±nÄ± yap
         uses: actions/configure-pages@v5
 
-      - name: dist klasörünü artifact olarak yükle
+      - name: dist klasÃ¶rÃ¼nÃ¼ artifact olarak yÃ¼kle
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
@@ -51,3 +51,4 @@ jobs:
       - name: GitHub Pages'e deploy et
         id: deployment
         uses: actions/deploy-pages@v4
+
