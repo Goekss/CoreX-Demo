@@ -12,7 +12,7 @@ import { LanguageProvider } from './hooks/useLanguage.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <BrowserRouter basename="/CoreX-Demo">
       <LanguageProvider>
         <AuthProvider>
           <App />
